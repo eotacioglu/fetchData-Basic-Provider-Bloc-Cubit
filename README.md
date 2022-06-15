@@ -1,3 +1,1 @@
-# getdata
-
-Bu projede state management yöntemi olarak provider, cubit ve bloc kullanılarak API servis ile data çekim işlemi yapılmıştır.
+Bu projede state management yöntemi olarak provider, cubit ve bloc kullanılarak API servis ile data çekim işlemi yapılmıştır. Ayrıcı navigation işlemleri için AutoRoute paketi ve navigation işlemlerini context gertektirmeyen bir yapıda kullanmak için ise GetIt paketi kullanılmıştır.
