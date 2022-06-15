@@ -6,6 +6,15 @@ import 'package:getdata/product/models/userModel/user.dart';
 import 'package:http/http.dart' as http;
 
 class ProviderViewModel with ChangeNotifier {
+  late int _a = 0;
+  get a => this._a;
+
+  set a(value) {
+    this._a = value;
+
+    notifyListeners();
+  }
+
   List<UserModel> _users = [];
   List<UserModel> get users => _users;
   set users(List<UserModel> users) {
@@ -39,7 +48,8 @@ class ProviderViewModel with ChangeNotifier {
     _changeLoading();
   }
 
-  void _changeLoading() {
-    isLoading = !isLoading;
-  }
+  void _changeLoading() => isLoading = !isLoading;
+
+  void arttir() => a++;
+  void azalt() => a >= 1 ? a-- : null;
 }

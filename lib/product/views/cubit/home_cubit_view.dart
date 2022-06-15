@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:getdata/core/constants/app_constants.dart';
 import 'package:getdata/core/services/alert/AlertService.dart';
 import 'package:getdata/product/views/cubit/home_cubit.dart';
-import 'package:getdata/product/views/cubit/home_cubit_service.dart';
+import 'package:getdata/product/services/GetDataService.dart';
 import 'package:getdata/product/widgets/loading_widget.dart';
 
 class HomeCubitPage extends StatefulWidget {
@@ -22,10 +22,10 @@ class _HomeCubitPageState extends State<HomeCubitPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeCubit(CubitService()),
+      create: (context) => HomeCubit(GetDataService()),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(AppConstants.blocTitle),
+          title: const Text(AppConstants.cubitTitle),
         ),
         body: BlocConsumer<HomeCubit, CubitState>(builder: (context, state) {
           if (state is CubitComplated) {

@@ -1,16 +1,16 @@
 import 'dart:convert';
 
+import 'package:getdata/core/constants/app_constants.dart';
 import 'package:getdata/product/models/userModel/user.dart';
-import 'package:getdata/product/views/cubit/ICubitService.dart';
+import 'package:getdata/product/services/IGetDataService.dart';
 import 'package:http/http.dart' as http;
 
-class CubitService extends ICubitService {
+class GetDataService extends IGetDataService {
 //GET DATA TO LIST
 
   @override
   Future<List<UserModel>> getUserData() async {
-    final response =
-        await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
+    final response = await http.get(Uri.parse(AppConstants.baseUrl));
 
     if (response.statusCode == 200) {
       List<dynamic> users = jsonDecode(response.body);

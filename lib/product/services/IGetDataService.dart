@@ -1,5 +1,5 @@
 import 'package:getdata/product/models/userModel/user.dart';
 
-abstract class ICubitService {
+abstract class IGetDataService {
   Future<List<UserModel>> getUserData();
 }

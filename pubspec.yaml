@@ -21,6 +21,8 @@ dependencies:
   json_annotation: ^4.5.0
   provider: ^6.0.3
   flutter_bloc: ^8.0.1
+  auto_route: ^4.0.1
+  get_it: ^7.2.0
  
  
 
@@ -32,6 +34,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.1.11
   json_serializable: ^6.2.0
+  auto_route_generator: ^4.0.0
 
 
 

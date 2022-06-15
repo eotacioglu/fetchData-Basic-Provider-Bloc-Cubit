@@ -4,7 +4,7 @@ import 'package:getdata/product/models/userModel/user.dart';
 import 'package:getdata/product/views/home/home_view_model.dart';
 import 'package:getdata/product/widgets/loading_widget.dart';
 
-//GET DATA FUTURE BUILDER
+//GET DATA WITH FUTURE BUILDER
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
