@@ -9,6 +9,9 @@ class HomeCubit extends Cubit<CubitState> {
   final IGetDataService cubitService;
 
   HomeCubit(this.cubitService) : super(const CubitInitial()) {
+    
+    // Cubit serivisinini çalışması için herhangi bir manuel tetikleyici kullanmamak adına fonksiyon Cubit servisinin constructor kısmında çalıştırılmıştır.
+    
     fetchData();
   }
 
