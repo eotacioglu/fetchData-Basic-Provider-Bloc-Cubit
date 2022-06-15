@@ -40,7 +40,7 @@ class _HomeBlocPageState extends State<HomeBlocPage> {
                     });
               }
 
-              // Buton kullanarak'da veriyi çağırabiliriz ama manuel tetikleme istemediğim için state HomeInitial olduğunda datayı çağırması için aşağıdaki fonksiyonu kullandık.
+              // Buton kullanarak'da veriyi çağırabiliriz ama manuel tetikleme istemediğim için state HomeInitial olduğunda datayı çağırması için aşağıdaki fonksiyonu kullandım.
               if (state is HomeInitial) {
                 context.read<HomeBloc>().add(GetDataEvent());
               }
