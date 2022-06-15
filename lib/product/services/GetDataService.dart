@@ -17,7 +17,7 @@ class GetDataService extends IGetDataService {
       // ignore: unnecessary_new
       return users.map((data) => new UserModel.fromJson(data)).toList();
     } else {
-      throw Exception('Failed to load album');
+      throw Exception('Kullanıcılar yüklenirken bir hata olutu');
     }
   }
 }
