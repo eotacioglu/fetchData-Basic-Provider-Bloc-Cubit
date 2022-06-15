@@ -10,9 +10,8 @@ class HomeBloc extends Bloc<GetDataEvent, HomeState> {
   final IGetDataService cubitService;
   HomeBloc(this.cubitService) : super(HomeInitial()) {
     on<GetDataEvent>((event, emit) async {
-      final result = await cubitService.getUserData();
-
       emit(HomeLoading());
+      final result = await cubitService.getUserData();
 
       try {
         if (result.isNotEmpty) {
