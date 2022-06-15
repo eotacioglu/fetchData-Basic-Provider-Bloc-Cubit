@@ -45,7 +45,7 @@ class _HomeCubitPageState extends State<HomeCubitPage> {
           if (state is CubitLoading) {
             return const LoadingWidget();
           }
-
+// Veriyi getirmek için buton da kullanabiliriz ama manuel tetiklenme istemediğim için Cubit servisin constructor kısmında veri çekme işlemini başlattım.
           return ElevatedButton(
               onPressed: () {
                 context.read<HomeCubit>().fetchData();
